@@ -10,10 +10,14 @@ Note: Ignore the black spots on screen, little damaged screen...
 
 ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/9955abc057941796b67e3a5f6a7c621a9ecbb740/tasks/task2/White_screen.jpeg)
 
-2)Display name
+2) Guides for pixel count
+   
+![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/191c1a7e7ffcc807722d12dbf7c5ad322d673963/tasks/task2/name_grid.jpeg)
+
+3)Display name
 
 ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/09b859857827152b5a7adfcefb2eb0b130e4289c/tasks/task2/display_RAHI.jpeg)
 
-3)Create the ball 
+4)Create the ball 
 
 ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/691e63f7c07ec322cf3cc8385536024762a02f67/tasks/task3/ball.jpeg)
