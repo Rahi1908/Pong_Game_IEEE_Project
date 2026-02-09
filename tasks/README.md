@@ -13,3 +13,7 @@ Note: Ignore the black spots on screen, little damaged screen...
 2)Display name
 
 ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/09b859857827152b5a7adfcefb2eb0b130e4289c/tasks/task2/display_RAHI.jpeg)
+
+3)Create the ball 
+
+![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/691e63f7c07ec322cf3cc8385536024762a02f67/tasks/task3/ball.jpeg)
