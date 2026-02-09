@@ -22,5 +22,8 @@ Note: Ignore the black spots on screen, little damaged screen...
 
 ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/691e63f7c07ec322cf3cc8385536024762a02f67/tasks/task3/ball.jpeg)
 
+5)Ball bouncing
+https://drive.google.com/file/d/13qbepvP8ANcZta4ua9xr5WejCspDSvZD/view?usp=sharing
+
 6)Paddle motion
 https://drive.google.com/file/d/1TYbvBeY7XMHHtXg-2SXcD2Fm0uwU-PGv/view?usp=sharing
