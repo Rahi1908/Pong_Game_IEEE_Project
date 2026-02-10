@@ -52,3 +52,4 @@ https://drive.google.com/file/d/1TYbvBeY7XMHHtXg-2SXcD2Fm0uwU-PGv/view?usp=shari
 
 ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/d4a9a71050a80c658d1a8d4b4293e428134fa07f/tasks/task4/FSM_logic.jpeg)
 
+![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/cddc7edbced3cd319cd1f0456133a6cd563e3fd6/tasks/task4/FSM_logic_.jpeg)
