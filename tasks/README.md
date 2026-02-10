@@ -6,6 +6,10 @@ This folder contains all assignments and their corresponding solutions related t
 
 Note: Ignore the black spots on screen, little damaged screen...
 
+1) VGA timing logic
+
+   ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/ff917047e71f14ff929b80de8aa6c649f1afcd3e/tasks/task2/vga_logic.jpeg)
+
 1)Created White Screen on VGA monitor
 
 ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/9955abc057941796b67e3a5f6a7c621a9ecbb740/tasks/task2/White_screen.jpeg)
