@@ -10,6 +10,10 @@ Note: Ignore the black spots on screen, little damaged screen...
 
    ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/ff917047e71f14ff929b80de8aa6c649f1afcd3e/tasks/task2/vga_logic.jpeg)
 
+2) Hsync becomes active at 656
+
+   ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/2b8f2d4c76ff5188ef4150524e83c959de961c8a/tasks/task2/hsync_active.jpeg)
+   
 1)Created White Screen on VGA monitor
 
 ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/9955abc057941796b67e3a5f6a7c621a9ecbb740/tasks/task2/White_screen.jpeg)
