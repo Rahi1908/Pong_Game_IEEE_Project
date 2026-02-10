@@ -21,6 +21,10 @@ Note: Ignore the black spots on screen, little damaged screen...
 4) Vsync becomes active at 490 vcount
 
    ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/6b04b7c789a859bb814bf400bee53683b07e19b3/tasks/task2/vsync_active.jpeg)
+
+5) Visible area ends at hcount 639
+
+   ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/6c3f6beca241dc0a12a57fbf51990c0bd9776a7a/tasks/task2/end_visible_area.jpeg)
    
 1)Created White Screen on VGA monitor
 
