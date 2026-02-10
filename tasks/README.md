@@ -13,6 +13,10 @@ Note: Ignore the black spots on screen, little damaged screen...
 2) Hsync becomes active at 656
 
    ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/2b8f2d4c76ff5188ef4150524e83c959de961c8a/tasks/task2/hsync_active.jpeg)
+
+3) Enable pulse activates at hcount 799
+
+   ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/9c073d97e688679739e89306d67178e68e9ba77c/tasks/task2/enable_pulse.jpeg)
    
 1)Created White Screen on VGA monitor
 
