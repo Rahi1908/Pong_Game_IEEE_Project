@@ -1,10 +1,10 @@
-# 🏓 Ping Pong Game on FPGA
+# Ping Pong Game on FPGA
 
 An FPGA-based implementation of the classic Ping Pong game using Verilog HDL, displayed on a VGA-compatible monitor via a Nexys 4 DDR (Artix-7) FPGA board. The game supports two-player mode and a CPU opponent mode, with features including randomized ball physics, a power-up system, and adjustable difficulty.
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Hardware Requirements](#hardware-requirements)
@@ -98,52 +98,6 @@ Uses Time-Division Multiplexing at 500 Hz to alternate between Player 1 and Play
 
 ---
 
-## Pin Constraints (XDC)
-
-### Clock & Reset
-
-| Signal | Pin | Description |
-|--------|-----|-------------|
-| `clk` | E3 | 100 MHz system clock |
-| `rst` | N17 | Active-high reset (slide switch SW0) |
-
-### VGA Output
-
-| Signal | Pins |
-|--------|------|
-| `vga_r[3:0]` | A4, C5, B4, A3 |
-| `vga_g[3:0]` | A6, B6, A5, C6 |
-| `vga_b[3:0]` | D8, D7, C7, B7 |
-| `hsync` | B11 |
-| `vsync` | B12 |
-
-### Paddle Controls (Push Buttons)
-
-| Signal | Pin | Function |
-|--------|-----|---------|
-| `lu` | P17 | Left paddle — Move Up (Player 1) |
-| `ld` | P18 | Left paddle — Move Down (Player 1) |
-| `ru` | M18 | Right paddle — Move Up (Player 2) |
-| `rd` | M17 | Right paddle — Move Down (Player 2) |
-
-### Mode Selection (Slide Switches)
-
-| Signal | Pin | Function |
-|--------|-----|---------|
-| `game_start` | J15 | Start / enter game |
-| `AI_mode` | L16 | Toggle CPU opponent (1 = CPU, 0 = 2-player) |
-| `hard_mode` | M13 | CPU difficulty (1 = Unbeatable, 0 = Beatable) |
-| `noob_switch` | R15 | Slow mode (1 = slow, 0 = fast) |
-
-### 7-Segment Display
-
-| Signal | Pins |
-|--------|------|
-| `an[7:0]` | U13, K2, T14, P14, J14, T9, J18, J17 |
-| `seg[7:0]` | H15, L18, T11, P15, K13, K16, R10, T10 |
-
----
-
 ## Controls
 
 ```
@@ -162,56 +116,11 @@ In **CPU mode**, Player 1's paddle is controlled by the AI. Player 2 still uses 
 
 ---
 
-## Game Flow & FSM
-
-```
-Power On
-    │
-    ▼
-[START SCREEN] ──(game_start switch ON)──▶ [IDLE]
-                                               │
-                                    (any button pressed)
-                                               │
-                                               ▼
-                                           [PLAY]
-                                          /       \
-                              (ball misses)       (collision)
-                                  │                   │
-                                  ▼               (continue)
-                               [MISS]
-                              /       \
-                  (score < 3)         (score = 3)
-                       │                   │
-                       ▼                   ▼
-                   [DELAY]          [GAME OVER SCREEN]
-                       │
-                       ▼
-                    [IDLE]
-```
 
 First player to reach **3 points** wins. The game over screen displays the winner and scores.
 
 ---
 
-## Project Structure
-
-```
-├── pong_game_10.v              # Top-level module (FSM, ball physics, CPU AI)
-├── vga_controller.v            # VGA sync signal generator (640x480 @ 60Hz)
-├── horizontal_counter.v        # Horizontal pixel counter
-├── vertical_counter.v          # Vertical pixel counter
-├── clk_divider_25MHz.v         # 100MHz → 25MHz (VGA pixel clock)
-├── clk_divider_120Hz.v         # 100MHz → 120Hz (power-up logic)
-├── clk_60Hz.v                  # 100MHz → 60Hz  (ball & paddle movement)
-├── clk_500Hz.v                 # 100MHz → 500Hz (7-seg multiplexing)
-├── random_velocity.v           # 8-bit LFSR for random ball serve direction
-├── rand_generator_power_up.v   # 20-bit LFSR for power-up spawn coordinates/timer
-├── power_ups.v                 # Power-up lifecycle state controller
-├── sevenseg_score.v            # Score display on 7-segment via TDM
-└── ball_constrain.xdc          # Vivado pin constraint file
-```
-
----
 
 ## How to Build & Flash
 
