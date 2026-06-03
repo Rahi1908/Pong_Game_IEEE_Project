@@ -123,7 +123,9 @@ First player to reach **3 points** wins. The game over screen displays the winne
 ## Results
 
 1. RTL Analysis
-   ![imahe_alt]()
+   ![imahe_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/f00cdf9942d639c42a616639609438e9829409ed/docs/Schematic%2003-06-2026%2009_51_18.png)
+
+2. ![image_alt]()
 
 ## How to Build & Flash
 
