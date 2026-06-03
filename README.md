@@ -120,7 +120,10 @@ In **CPU mode**, Player 1's paddle is controlled by the AI. Player 2 still uses 
 First player to reach **3 points** wins. The game over screen displays the winner and scores.
 
 ---
+## Results
 
+1. RTL Analysis
+   ![imahe_alt]()
 
 ## How to Build & Flash
 
