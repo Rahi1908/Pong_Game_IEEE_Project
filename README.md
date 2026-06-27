@@ -133,29 +133,29 @@ First player to reach **3 points** wins. The game over screen displays the winne
 ## Results and Reports
 
 1. RTL Analysis
-   ![imahe_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/f00cdf9942d639c42a616639609438e9829409ed/docs/Schematic%2003-06-2026%2009_51_18.png)
+   ![imahe_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/67e1300adad7442c18e00c868550ab5c22c288e9/docs/RTL.png)
 
 2. Reports
 
    ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/92561059cbd6f2da5019b35d81f79fa39d2e9751/docs/reports.png)
    
-4. ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/b21c3c853aa0a7144486b5ea59d06f04fca45ed1/docs/img1.jpeg)
+3. ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/b21c3c853aa0a7144486b5ea59d06f04fca45ed1/docs/img1.jpeg)
 
-5. Milestone 1: Initial ball movement
+4. Milestone 1: Initial ball movement
 Successfully implemented basic ball motion considering collisions with
 walls using if-else comditions and clock-controlled updates, laying the
 foundation for real-time gameplay.
 
 https://drive.google.com/file/d/13qbepvP8ANcZta4ua9xr5WejCspDSvZD/view
 
-4. Milestone 2: Paddles Motion
+5. Milestone 2: Paddles Motion
 Implemented logic for paddles motion using user inputs through push
 buttons on FPGA . Adding restrictions over paddle’s motion after collisions
 with top and bottom walls.
 
 https://drive.google.com/file/d/1TYbvBeY7XMHHtXg-2SXcD2Fm0uwU-PGv/view
 
-5. Milestone 3: Integration of ball and paddles with scores
+6. Milestone 3: Integration of ball and paddles with scores
 IIntergrated ball and paddles motion. Displayed scores on screen and 7
 seg dislay on FPGA.
 
