@@ -76,9 +76,6 @@ Driven by a 25 MHz pixel clock. Generates `hsync` and `vsync` pulses for 640×48
 ### `clk_divider_25MHz.v` — 25 MHz Clock Divider
 Divides the 100 MHz system clock down to 25 MHz for the VGA controller.
 
-### `clk_divider_120Hz.v` — 120 Hz Clock Divider
-Used for the random power-up generation logic, providing controlled spawning update rate.
-
 ### `clk_60Hz.v` — 60 Hz Clock Divider
 Drives ball movement and paddle physics, synchronized to the display refresh rate for smooth gameplay.
 
