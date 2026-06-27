@@ -89,7 +89,7 @@ Maintain the horizontal and vertical scan counters used by the VGA controller.
 Implements an 8-bit LFSR running at the system clock frequency. Samples bit 0 (horizontal direction) and bit 7 (vertical direction) on each serve to randomize the ball's initial trajectory.
 
 ### `rand_generator_power_up.v` — Power-Up Randomness Engine
-A 20-bit LFSR clocked at 120 Hz. XOR feedback on bits 19, 16, 13, and 12 ensures a long, non-repeating pseudo-random sequence. Maps LFSR output to valid VGA coordinates for power-up spawn position and randomizes the timer interval between spawns (`pu_time`).
+A 20-bit LFSR clocked at 60 Hz. XOR feedback on bits 19, 16, 13, and 12 ensures a long, non-repeating pseudo-random sequence. Maps LFSR output to valid VGA coordinates for power-up spawn position and randomizes the timer interval between spawns (`pu_time`).
 
 ### `power_ups.v` — Power-Up Lifecycle Controller
 Manages the power-up's visibility and spawning state. Increments an internal timer until it matches the random threshold from `rand_generator_power_up`. Latches spawn coordinates when activated, and resets on collection (`pu_collected` signal asserted by ball collision).
