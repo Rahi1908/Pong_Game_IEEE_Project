@@ -104,19 +104,25 @@ Uses Time-Division Multiplexing at 500 Hz to alternate between Player 1 and Play
 
 ## Controls
 
-```
-Left Paddle (Player 1):        Right Paddle (Player 2):
-  ↑  →  Button P17 (lu)          ↑  →  Button M18 (ru)
-  ↓  →  Button P18 (ld)          ↓  →  Button M17 (rd)
+### Paddle Configurations
+| Player | Action | Hardware Button | Label |
+| :--- | :---: | :--- | :--- |
+| **Left Paddle (Player 1)** | ↑ Move Up | `P17` | `lu` |
+| | ↓ Move Down | `P18` | `ld` |
+| **Right Paddle (Player 2)** | ↑ Move Up | `M18` | `ru` |
+| | ↓ Move Down | `M17` | `rd` |
 
-Mode Switches:
-  SW J15  →  game_start   : Flip to enter game from start screen
-  SW L16  →  AI_mode      : Enable CPU opponent for left paddle
-  SW M13  →  hard_mode    : Make CPU unbeatable
-  SW R15  →  noob_switch  : Enable slow/beginner mode
-```
+> **Note:** In **CPU mode**, Player 1's paddle is automatically controlled by the AI. Player 2 will continue to use the manual `ru` / `rd` buttons.
 
-In **CPU mode**, Player 1's paddle is controlled by the AI. Player 2 still uses `ru`/`rd` buttons.
+---
+
+### Hardware Mode Switches
+| Switch | Signal Name | Description |
+| :--- | :--- | :--- |
+| `SW J15` | `game_start` | Flip to enter the game from the start screen |
+| `SW L16` | `AI_mode` | Enable CPU opponent for the Left Paddle |
+| `SW M13` | `hard_mode` | Increase difficulty (makes the CPU unbeatable) |
+| `SW R15` | `noob_switch` | Enable slow / beginner-friendly mode |
 
 ---
 
