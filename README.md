@@ -68,6 +68,8 @@ The top-level module integrating all subsystems. Manages the game FSM, ball phys
 | `MISS` | Ball passed a paddle; point awarded; transitions to IDLE or game over |
 | `DELAY` | Brief hold state after a miss before the next serve |
 
+![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/18647fc33469822d3ffa235596502351bb73c730/docs/fsm.png)
+
 ### `vga_controller.v` — VGA Sync Generator
 Driven by a 25 MHz pixel clock. Generates `hsync` and `vsync` pulses for 640×480 @ 60Hz. Exports live `h_counter` and `v_counter` pixel coordinates to the rendering logic.
 
