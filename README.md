@@ -130,14 +130,18 @@ Uses Time-Division Multiplexing at 500 Hz to alternate between Player 1 and Play
 First player to reach **3 points** wins. The game over screen displays the winner and scores.
 
 ---
-## Results
+## Results and Reports
 
 1. RTL Analysis
    ![imahe_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/f00cdf9942d639c42a616639609438e9829409ed/docs/Schematic%2003-06-2026%2009_51_18.png)
 
-2. ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/b21c3c853aa0a7144486b5ea59d06f04fca45ed1/docs/img1.jpeg)
+2. Reports
 
-3. Milestone 1: Initial ball movement
+   ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/92561059cbd6f2da5019b35d81f79fa39d2e9751/docs/reports.png)
+   
+4. ![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/b21c3c853aa0a7144486b5ea59d06f04fca45ed1/docs/img1.jpeg)
+
+5. Milestone 1: Initial ball movement
 Successfully implemented basic ball motion considering collisions with
 walls using if-else comditions and clock-controlled updates, laying the
 foundation for real-time gameplay.
