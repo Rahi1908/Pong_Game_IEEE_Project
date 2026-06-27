@@ -83,3 +83,4 @@ set_property PACKAGE_PIN M13 [get_ports hard_mode]
 
 set_property IOSTANDARD LVCMOS33 [get_ports noob_switch]
 set_property PACKAGE_PIN R15 [get_ports noob_switch]
+create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_ports clk]

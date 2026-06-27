@@ -771,42 +771,42 @@ always @(posedge clk_60HZ or posedge rst) begin
 
                 PLAY: begin
                     // direction flips - independent of each other
-                  if (hit_right_paddle) begin
+                if (hit_right_paddle) begin
                     dx <= -dx;
                     if (noob_switch) begin
-                        // NOOB speeds - slower
-                        if      (k >= c        && k < c + (d-c)/5)      begin speed_x<=17'sd8; speed_y<=17'sd8; end
-                        else if (k >= c+(d-c)/5   && k < c+2*(d-c)/5)   begin speed_x<=17'sd6; speed_y<=17'sd6; end
-                        else if (k >= c+2*(d-c)/5 && k < c+3*(d-c)/5)   begin speed_x<=17'sd5; speed_y<=17'sd5; end
-                        else if (k >= c+3*(d-c)/5 && k < c+4*(d-c)/5)   begin speed_x<=17'sd6; speed_y<=17'sd6; end
-                        else                                              begin speed_x<=17'sd8; speed_y<=17'sd8; end
+                    // NOOB speeds - slower
+                        if      ((k - c) * 5 < (d - c))         begin speed_x<=17'sd8; speed_y<=17'sd8; end
+                        else if ((k - c) * 5 < 2 * (d - c))     begin speed_x<=17'sd6; speed_y<=17'sd6; end
+                        else if ((k - c) * 5 < 3 * (d - c))     begin speed_x<=17'sd5; speed_y<=17'sd5; end
+                        else if ((k - c) * 5 < 4 * (d - c))     begin speed_x<=17'sd6; speed_y<=17'sd6; end
+                        else                                       begin speed_x<=17'sd8; speed_y<=17'sd8; end
                     end else begin
-                        // HARD speeds - faster
-                        if      (k >= c        && k < c + (d-c)/5)      begin speed_x<=17'sd11; speed_y<=17'sd11; end
-                        else if (k >= c+(d-c)/5   && k < c+2*(d-c)/5)   begin speed_x<=17'sd9; speed_y<=17'sd9; end
-                        else if (k >= c+2*(d-c)/5 && k < c+3*(d-c)/5)   begin speed_x<=17'sd8; speed_y<=17'sd8; end
-                        else if (k >= c+3*(d-c)/5 && k < c+4*(d-c)/5)   begin speed_x<=17'sd9; speed_y<=17'sd9; end
-                        else                                              begin speed_x<=17'sd11; speed_y<=17'sd11; end
-                   end
-               end
-
-               else if (hit_left_paddle) begin
-                dx <= -dx;
-                if (noob_switch) begin
-                    if      (k >= a        && k < a + (b-a)/5)      begin speed_x<=17'sd8; speed_y<=17'sd8; end
-                    else if (k >= a+(b-a)/5   && k < a+2*(b-a)/5)   begin speed_x<=17'sd6; speed_y<=17'sd6; end
-                    else if (k >= a+2*(b-a)/5 && k < a+3*(b-a)/5)   begin speed_x<=17'sd5; speed_y<=17'sd5; end
-                    else if (k >= a+3*(b-a)/5 && k < a+4*(b-a)/5)   begin speed_x<=17'sd6; speed_y<=17'sd6; end
-                    else                                              begin speed_x<=17'sd8; speed_y<=17'sd8; end
-                end else begin
-                    if      (k >= a        && k < a + (b-a)/5)      begin speed_x<=17'sd11; speed_y<=17'sd11; end
-                    else if (k >= a+(b-a)/5   && k < a+2*(b-a)/5)   begin speed_x<=17'sd9; speed_y<=17'sd9; end
-                    else if (k >= a+2*(b-a)/5 && k < a+3*(b-a)/5)   begin speed_x<=17'sd8; speed_y<=17'sd8; end
-                    else if (k >= a+3*(b-a)/5 && k < a+4*(b-a)/5)   begin speed_x<=17'sd9; speed_y<=17'sd9; end
-                    else                                              begin speed_x<=17'sd11; speed_y<=17'sd11; end
+                    // HARD speeds - faster
+                        if      ((k - c) * 5 < (d - c))         begin speed_x<=17'sd11; speed_y<=17'sd11; end
+                        else if ((k - c) * 5 < 2 * (d - c))     begin speed_x<=17'sd9; speed_y<=17'sd9; end
+                        else if ((k - c) * 5 < 3 * (d - c))     begin speed_x<=17'sd8; speed_y<=17'sd8; end
+                        else if ((k - c) * 5 < 4 * (d - c))     begin speed_x<=17'sd9; speed_y<=17'sd9; end
+                        else                                       begin speed_x<=17'sd11; speed_y<=17'sd11; end
+                    end
                 end
-              end
-                   
+                
+                else if (hit_left_paddle) begin
+                    dx <= -dx;
+                    if (noob_switch) begin
+                        if      ((k - a) * 5 < (b - a))         begin speed_x<=17'sd8; speed_y<=17'sd8; end
+                        else if ((k - a) * 5 < 2 * (b - a))     begin speed_x<=17'sd6; speed_y<=17'sd6; end
+                        else if ((k - a) * 5 < 3 * (b - a))     begin speed_x<=17'sd5; speed_y<=17'sd5; end
+                        else if ((k - a) * 5 < 4 * (b - a))     begin speed_x<=17'sd6; speed_y<=17'sd6; end
+                        else                                       begin speed_x<=17'sd8; speed_y<=17'sd8; end
+                    end else begin
+                        if      ((k - a) * 5 < (b - a))         begin speed_x<=17'sd11; speed_y<=17'sd11; end
+                        else if ((k - a) * 5 < 2 * (b - a))     begin speed_x<=17'sd9; speed_y<=17'sd9; end
+                        else if ((k - a) * 5 < 3 * (b - a))     begin speed_x<=17'sd8; speed_y<=17'sd8; end
+                        else if ((k - a) * 5 < 4 * (b - a))     begin speed_x<=17'sd9; speed_y<=17'sd9; end
+                        else                                       begin speed_x<=17'sd11; speed_y<=17'sd11; end
+                    end
+                end
+                
                    // powerup collection 
                   if (pu_active &&
                      (h_next + R >= pu_x - 10) && (h_next - R <= pu_x + 10) &&
