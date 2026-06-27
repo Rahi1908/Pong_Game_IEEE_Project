@@ -27,7 +27,7 @@ output [7:0] an
     parameter R = 17'sd10;  // Radius of ball 10 px
     parameter IDLE=2'b00, PLAY=2'b01, MISS=2'b10, DELAY=2'b11 ; //finite states
     
-    wire clk_120HZ;
+    //wire clk_120HZ;
     wire clk_500HZ;
     wire clk_60HZ;
     reg [3:0] red;
@@ -82,11 +82,11 @@ output [7:0] an
   
     clk_500Hz uut_clk500hz ( .clk(clk), .rst(rst), .clk_500HZ(clk_500HZ) );
     
-    clk_divider_120Hz clk_gen ( .clk(clk) , .rst(rst) , .clk_120HZ(clk_120HZ) );
+    //clk_divider_120Hz clk_gen ( .clk(clk) , .rst(rst) , .clk_120HZ(clk_120HZ) );
     
     clk_60Hz clk_gen_60hz (.clk(clk), .rst(rst), .clk_60HZ(clk_60HZ));
     
-    power_ups pu_inst (.clk_60hz(clk_60HZ), .clk_120hz(clk_120HZ), .reset(rst), 
+    power_ups pu_inst (.clk_60hz(clk_60HZ), .reset(rst), 
         .pu_collected(pu_collected), .pu_active(pu_active), .curr_ran_x(pu_x_raw), .curr_ran_y(pu_y_raw));
     
     vga_controller dut ( .clk(clk) , .rst(rst) , .red(red) , .blue(blue) , .grn(grn)
@@ -95,7 +95,7 @@ output [7:0] an
       
     sevenseg_score scores (.clk_500hz(clk_500HZ), .pla1_score(p1_score), .pla2_score(p2_score), .an(an), .digit(seg) );
    
-    random_velocity rdm_vel ( .clk(clk), .rst(rst), .dx_rdm(dx_rdm), .dy_rdm(dy_rdm) );
+    random_velocity rdm_vel ( .clk_60hz(clk_60HZ), .rst(rst), .dx_rdm(dx_rdm), .dy_rdm(dy_rdm) );
     
       
    //                     ----------------------------

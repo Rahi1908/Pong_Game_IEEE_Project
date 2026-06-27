@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module rand_generator_power_up(
-    input clk_120hz,
+    input clk_60hz,
     input reset,
     output [9:0] pu_x,
     output [9:0] pu_y,
@@ -13,7 +13,7 @@ module rand_generator_power_up(
     
     assign feedback = lfsr[19] ^ lfsr[16] ^ lfsr[13] ^ lfsr[12];
     
-    always @(posedge clk_120hz or posedge reset) begin
+    always @(posedge clk_60hz or posedge reset) begin
         if (reset) begin
             lfsr <= 20'hABCDE;
         end else begin
@@ -24,6 +24,6 @@ module rand_generator_power_up(
     assign pu_x = lfsr[19:11] + 64;
     assign pu_y = lfsr[7:0] + 112;
 //    assign pu_time = lfsr[18:10] + 600;
-    assign pu_time = lfsr[17:10] + 120;
+    assign pu_time = lfsr[16:10] + 60;
     
 endmodule

@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module random_velocity(
-input clk,
+input clk_60hz,
 input rst,
 output signed [16:0] dx_rdm,
 output signed [16:0] dy_rdm
@@ -10,7 +10,7 @@ output signed [16:0] dy_rdm
     // 4-bit LFSR register
     reg [3:0] lfsr;
     
-    always @(posedge clk or posedge rst) 
+    always @(posedge clk_60hz or posedge rst) 
         begin
             if (rst) 
                 begin

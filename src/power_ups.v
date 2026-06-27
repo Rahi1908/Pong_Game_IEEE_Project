@@ -2,7 +2,7 @@
 
 module power_ups(
     input clk_60hz,
-    input clk_120hz,
+    //input clk_120hz,
     input reset,
     input pu_collected,
     output reg pu_active,
@@ -17,7 +17,7 @@ module power_ups(
     reg [10:0] timer;
 
     rand_generator_power_up ran_pu_inst(
-        .clk_120hz(clk_120hz),
+        .clk_60hz(clk_60hz),
         .reset(reset),
         .pu_x(ran_x),
         .pu_y(ran_y),
