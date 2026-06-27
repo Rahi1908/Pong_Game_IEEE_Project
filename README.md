@@ -24,6 +24,8 @@ This project implements Pong entirely in hardware — no microcontroller or proc
 
 The game is displayed at **640×480 @ 60Hz** via the onboard VGA connector, and scores are shown on both the VGA screen and the **8-digit 7-segment display**.
 
+![image_alt](https://github.com/Rahi1908/Pong_Game_IEEE_Project/blob/3243ec57f39c757562e1089d69f49d57bfd41917/docs/top_level_diagram.png)
+
 ---
 
 ## Hardware Requirements
